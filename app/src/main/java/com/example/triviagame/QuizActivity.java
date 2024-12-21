@@ -20,7 +20,10 @@ public class QuizActivity extends AppCompatActivity {
     private TextView timerText;
     private Player player;
     private  CountDownTimer countdowntimer;
-
+    // Declare an array of button IDs
+    private final int[] optionButtonIds = {
+            R.id.option1, R.id.option2, R.id.option3, R.id.option4
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,10 +81,10 @@ public class QuizActivity extends AppCompatActivity {
         TextView questionText = findViewById(R.id.questionText);
         questionText.setText(currentQuestion.getQuestion());
 
-        Button button1=findViewById(R.id.option1);
-        Button button2=findViewById(R.id.option2);
-        Button button3=findViewById(R.id.option3);
-        Button button4=findViewById(R.id.option4);
+        Button button1=findViewById(optionButtonIds[0]);
+        Button button2=findViewById(optionButtonIds[1]);
+        Button button3=findViewById(optionButtonIds[2]);
+        Button button4=findViewById(optionButtonIds[3]);
         // Set the shuffled options to the buttons
         button1.setText(shuffledOptions.get(0));
         button2.setText(shuffledOptions.get(1));
@@ -98,8 +101,7 @@ public class QuizActivity extends AppCompatActivity {
     // Checks whether the selected answer is correct
     private void checkAnswer(Question currentQuestion, int selectedOptionIndex) {
         int shuffledCorrectIndex = currentQuestion.getShuffledCorrectOptionIndex();
-        Button selectedButton = findViewById(getResources().getIdentifier("option" + (selectedOptionIndex + 1), "id", getPackageName()));
-
+        Button selectedButton = findViewById(optionButtonIds[selectedOptionIndex]);
         // Check if the selected answer is correct and update the player's score
         if (shuffledCorrectIndex == selectedOptionIndex) {
             player.setScore(player.getScore() + 5);  // Award 5 points for a correct answer
