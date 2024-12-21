@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/category">
+
+
+    <TextView
+        android:id="@+id/HelloUser"
+        android:layout_width="191dp"
+        android:layout_height="73dp"
+        android:layout_gravity="center"
+        android:text="@string/hello"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/select_a_category"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:backgroundTint="@color/black"
+        android:id="@+id/categoryScience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/science"/>
+
+    <Button
+        android:backgroundTint="@color/black"
+        android:id="@+id/categoryHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history"/>
+
+    <Button
+        android:backgroundTint="@color/black"
+        android:id="@+id/categorySports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sports"/>
+
+
+</LinearLayout>

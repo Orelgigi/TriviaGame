@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="@drawable/home"
+   >
+
+
+    <TextView
+        android:id="@+id/nameGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/trivia_game"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="277dp"
+        android:layout_height="83dp"
+        android:hint="@string/user_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="#262020"
+            android:textColor="#F4EEEE" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:backgroundTint="@color/black"
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_game" />
+
+
+
+</LinearLayout>
