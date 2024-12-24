@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class CategoryActivity extends AppCompatActivity {
+
+
     String playerName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
